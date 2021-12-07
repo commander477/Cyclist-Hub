@@ -20,17 +20,25 @@
               <ion-label position="floating">Password</ion-label>
               <ion-input type="password"></ion-input>
             </ion-item>
+            <ion-item>
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
             <div class="buttons">
-              <ion-button fill="clear" class="sign-up">Sign Up</ion-button>
-              <ion-button fill="clear" class="login">LogIn</ion-button>
+              <ion-button fill="clear" class="sign-up">Sign In</ion-button>
+              
             </div>
           </ion-card-content>
         </ion-card>
       </div>
-      <ion-img :src="idiots" class="3idiots"></ion-img>
+       <ion-img :src="idiots" class="3idiots"></ion-img>
     </ion-content>
   </ion-page>
 </template>
+
+ 
+
+
 
 <script lang="ts">
 import { IonContent, IonPage, IonImg } from "@ionic/vue";
@@ -46,14 +54,14 @@ export default defineComponent({
   data() {
     return {
       compass: "../../assets/compass.gif",
-      idiots: "../../assets/3idiots.jpg",
+      idiots: "../../assets/3idiots.jpg"
     };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 .container {
   display: block;
   width: 100%;
@@ -74,10 +82,10 @@ export default defineComponent({
 }
 .title {
   font-size: 42px;
-  font-family: "Sawarabi Mincho", sans-serif;
+  font-family: 'Sawarabi Mincho', sans-serif;
   display: block;
   text-align: center;
-  background-image: linear-gradient(180deg, #ff000f, #0469ff);
+  background-image: linear-gradient(180deg, #FF000F, #0469FF);
   background-clip: text;
   color: transparent;
 }
@@ -88,12 +96,14 @@ export default defineComponent({
   .login {
     position: absolute;
     right: 0;
-    text-decoration: underline;
+    text-decoration:underline;
     color: #000;
   }
-  .sign-up {
-    text-decoration: underline;
-    color: #000;
+    .sign-up{
+  text-decoration:underline;
+  color: #000;
+
   }
 }
 </style>
+
