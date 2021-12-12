@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "CyclistHubV2",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
