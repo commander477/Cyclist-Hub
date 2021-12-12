@@ -4,36 +4,22 @@
       <div class="container">
         <ion-img :src="compass" class="compass"></ion-img>
       </div>
-
       <strong class="title">Cyclyst Hub</strong>
-
       <div class="profile">
         <div class="container2">
           <ion-img :src="ppf" class=""></ion-img>
         </div>
-        <ion-button>Edit</ion-button>
       </div>
       <ion-text
         >Cylist's ID:
         <span class="c-id">{{ cyclistId }}</span>
       </ion-text>
-      <div class="lists">
-        <ion-button>
-          <ion-img :src="power" class="icons"></ion-img>
-          <ion-text>Choose Route</ion-text>
-        </ion-button>
-        <ion-button>
-          <ion-img :src="addcyclist" class="icons"></ion-img>
-          <ion-text>Cyclist List</ion-text>
-        </ion-button>
-        <ion-button>
-          <ion-img :src="gearsetting" class="icons"></ion-img>
-          <ion-text>Add Cyclist</ion-text>
-        </ion-button>
-        <ion-button>
-          <ion-img :src="ppf" class="icons"></ion-img>
-          <ion-text>Gear Settings</ion-text>
-        </ion-button>
+      <div class="section">
+        <ion-card>
+          <ion-button expand="full" class="btn">View Cyclyst Picture</ion-button>
+          <ion-button expand="full" class="btn">Change Cyclist Picture</ion-button>
+          <ion-button expand="full" class="btn">Your Adressess</ion-button>
+        </ion-card>
       </div>
       <ion-button class="pin">
         <ion-img :src="location" class="location"></ion-img>
@@ -137,28 +123,7 @@ ion-text {
     border-radius: 50%;
   }
 }
-.lists {
-  display: block;
-  margin: 100px 0 0 0;
-  ion-button {
-    --background: none;
-    --box-shadow: none;
-    display: block;
-    width: min-content;
-  }
-  ion-text {
-    color: #000;
-    font-family: "ABeeZee", sans-serif;
-    font-size: 16px;
-    text-transform: capitalize;
-    padding: 0 0 0 10px;
-  }
-  .icons {
-    width: 34px;
-    height: 32px;
-    border-radius: 50%;
-  }
-}
+
 .pin {
   position: absolute;
   bottom: 5px;
@@ -177,5 +142,23 @@ ion-text {
     --box-shadow: none;
     float: center;
   }
+}
+.section {
+    background: white;
+    font-family: "Rufina", sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 0;
+    padding: 0 30px;
+    ion-card {
+        box-shadow: none!important;
+        ion-button {
+            display: block;
+            --background: #C4C4C4;
+            --box-shadow: none;
+            color: #000;
+            text-transform: capitalize;
+            margin: 0 0 20px 0;
+        }
+    }
 }
 </style>

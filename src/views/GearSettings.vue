@@ -1,7 +1,8 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
-      <div class="container">
+        <div class="container">
+                <div class="box">
         <ion-img :src="compass" class="compass"></ion-img>
       </div>
       <strong class="title">Cyclyst Hub</strong>
@@ -55,6 +56,7 @@
           </ion-item>
         </ion-card>
       </div>
+        </div>
 
       <div class="buttons">
         <ion-button fill="clear" class="cancel">Cancel</ion-button>
@@ -92,6 +94,7 @@ ion-page {
 .container {
   display: block;
   width: 100%;
+  height: 92vh;
   padding: 5px 5px 0px 5px;
 }
 .compass {
