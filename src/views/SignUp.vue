@@ -25,7 +25,7 @@
               <ion-input type="password"></ion-input>
             </ion-item>
             <div class="buttons">
-              <ion-button fill="clear" class="sign-up">Sign In</ion-button>
+              <ion-button @click="SetInformation" fill="clear" class="sign-up">Sign In</ion-button>
               
             </div>
           </ion-card-content>
@@ -57,6 +57,11 @@ export default defineComponent({
       idiots: "../../assets/3idiots.jpg"
     };
   },
+  methods: {
+    SetInformation() {
+      this.$router.push("/Set-Information");
+    }
+  }
 });
 </script>
 

@@ -21,7 +21,7 @@
         </ion-card>
       </div>
       <div class="buttons" >
-        <ion-button fill="clear" class="cancel">Select New Location</ion-button>
+        <ion-button @click="ChooseLocation" fill="clear" class="cancel">Select New Location</ion-button>
         <ion-button fill="clear" class="confirm">Confirm Location</ion-button>
       </div>
     </ion-content>
@@ -45,6 +45,11 @@ export default defineComponent({
       compass: "../../assets/compass.gif",
     };
   },
+  methods: {
+    ChooseLocation() {
+      this.$router.push("/choose-location");
+    },
+  }
 });
 </script>
 <style lang="scss" scoped>

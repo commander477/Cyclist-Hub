@@ -9,6 +9,7 @@ import ProfileSetting from '../views/ProfileSetting.vue'
 import ChangeProfilePic from '../views/ChangeProfilePic.vue'
 import ChooseLocation from '../views/ChooseLocation.vue'
 import ChooseRoute from '../views/ChooseRoute.vue'
+import AddCyclist from '../views/AddCyclist.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -58,6 +59,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/gear-settings',
     name: 'GearSettings',
     component: GearSettings
+  },
+  {
+    path: '/add-cyclist',
+    name: 'AddCyclist',
+    component: AddCyclist
   }
 ]
 

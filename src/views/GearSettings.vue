@@ -23,7 +23,7 @@
           <ion-item class="ion-no-padding" lines="none">
             <ion-text>Sex:</ion-text>
           </ion-item>
-          <ion-button class="edit">Edit</ion-button>
+          <ion-button @click="SetInformation" class="edit">Edit</ion-button>
         </ion-card>
       </div>
 
@@ -52,15 +52,15 @@
             <ion-button class="btn">Clear Cache</ion-button>
           </ion-item>
           <ion-item class="ion-no-padding" lines="none">
-            <ion-button class="btn">Log Out</ion-button>
+            <ion-router-link href="/log-in" class="btn">Log Out</ion-router-link>
           </ion-item>
         </ion-card>
       </div>
         </div>
 
       <div class="buttons">
-        <ion-button fill="clear" class="cancel">Cancel</ion-button>
-        <ion-button fill="clear" class="confirm">Confirm</ion-button>
+        <ion-router-link href="/profile-page" fill="clear" class="cancel">Cancel</ion-router-link>
+        <ion-router-link href="/profile-page" fill="clear" class="confirm">Confirm</ion-router-link>
       </div>
     </ion-content>
   </ion-page>
@@ -82,6 +82,11 @@ export default defineComponent({
       compass: "../../assets/compass.gif",
     };
   },
+  methods: {
+    SetInformation() {
+      this.$router.push("/set-information");
+    }
+  }
 });
 </script>
 

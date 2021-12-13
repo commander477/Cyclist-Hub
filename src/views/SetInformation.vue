@@ -27,7 +27,7 @@
         </ion-item>
         <ion-item lines="none" class="section">
           <ion-label class="label" position="fixed">Birthdate:</ion-label>
-          <ion-input class="input-box ion-no-padding"></ion-input>
+          <ion-input type="date" class="input-box ion-no-padding"></ion-input>
         </ion-item>
         <ion-item lines="none" class="section">
           <ion-label class="label" position="fixed">Sex:</ion-label>
@@ -35,8 +35,8 @@
         </ion-item>
       </ion-card>
       <div class="buttons">
-        <ion-button fill="clear" class="cancel">Cancel</ion-button>
-        <ion-button fill="clear" class="confirm">Confirm</ion-button>
+        <ion-button  @click="SignUp" fill="clear" class="cancel">Cancel</ion-button>
+        <ion-button  @click="ProfilePage" fill="clear" class="confirm">Confirm</ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -61,6 +61,14 @@ export default defineComponent({
       cyclistId: "CH211207",
     };
   },
+   methods: {
+    SignUp() {
+      this.$router.push("/sign-up");
+   },
+    ProfilePage() {
+      this.$router.push("/profile-page");
+   }
+   }
 });
 </script>
 

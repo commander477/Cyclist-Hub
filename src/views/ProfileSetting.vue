@@ -21,7 +21,7 @@
           <ion-button expand="full" class="btn">Your Adressess</ion-button>
         </ion-card>
       </div>
-      <ion-button class="pin">
+      <ion-button @click="ProfilePage" class="pin">
         <ion-img :src="location" class="location"></ion-img>
       </ion-button>
     </ion-content>
@@ -51,6 +51,11 @@ export default defineComponent({
       cyclistId: "CH211207",
     };
   },
+  methods: {
+    ProfilePage() {
+      this.$router.push("/profile-page");
+    }
+  }
 });
 </script>
 

@@ -21,9 +21,11 @@
               <ion-input type="password"></ion-input>
             </ion-item>
             <div class="buttons">
-              <ion-button fill="clear" class="sign-up">Sign Up</ion-button>
-              
-              <ion-button fill="clear" class="login">LogIn</ion-button>
+              <ion-button @click="signUp" fill="clear" class="sign-up"
+                >Sign Up</ion-button>
+              <ion-button @click="ProfilePage" fill="clear" class="login"
+                >LogIn</ion-button
+              >
             </div>
           </ion-card-content>
         </ion-card>
@@ -34,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage, IonImg, } from "@ionic/vue";
+import { IonContent, IonPage, IonImg } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -50,6 +52,14 @@ export default defineComponent({
       idiots: "../../assets/3idiots.jpg",
     };
   },
+    methods: {
+    signUp() {
+      this.$router.push("/sign-up");
+    },
+    ProfilePage() {
+      this.$router.push("/profile-page");
+    }
+  }
 });
 </script>
 

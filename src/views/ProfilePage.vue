@@ -11,31 +11,31 @@
         <div class="container2">
           <ion-img :src="ppf" class=""></ion-img>
         </div>
-        <ion-button>Edit</ion-button>
+        <ion-button @click="ProfileSetting">Edit</ion-button>
       </div>
       <ion-text
         >Cylist's ID:
         <span class="c-id">{{ cyclistId }}</span>
       </ion-text>
       <div class="lists">
-        <ion-button>
+        <ion-button @click="ChooseLocation">
           <ion-img :src="power" class="icons"></ion-img>
           <ion-text>Choose Route</ion-text>
         </ion-button>
-        <ion-button>
+        <ion-button @click="AddCyclist">
           <ion-img :src="addcyclist" class="icons"></ion-img>
           <ion-text>Cyclist List</ion-text>
         </ion-button>
-        <ion-button>
+        <ion-button @click="AddCyclist">
           <ion-img :src="gearsetting" class="icons"></ion-img>
           <ion-text>Add Cyclist</ion-text>
         </ion-button>
-        <ion-button>
+        <ion-button @click="GearSettings">
           <ion-img :src="ppf" class="icons"></ion-img>
           <ion-text>Gear Settings</ion-text>
         </ion-button>
       </div>
-      <ion-button class="pin">
+      <ion-button @click="ProfilePage" class="pin">
         <ion-img :src="location" class="location"></ion-img>
       </ion-button>
     </ion-content>
@@ -64,6 +64,23 @@ export default defineComponent({
       location: "../../assets/location.jpg",
       cyclistId: "CH211207",
     };
+  },
+  methods: {
+    ChooseLocation() {
+      this.$router.push("/choose-location");
+    },
+    AddCyclist() {
+      this.$router.push("/add-cyclist");
+    },
+    GearSettings() {
+      this.$router.push("/gear-settings");
+    },
+    ProfileSetting() {
+      this.$router.push("/profile-setting");
+    },
+    ProfilePage() {
+      this.$router.push("/profile-page");
+    },
   },
 });
 </script>
