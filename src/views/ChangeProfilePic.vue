@@ -5,13 +5,12 @@
         <ion-img :src="compass" class="compass"></ion-img>
       </div>
       <strong class="title">Cyclyst Hub</strong>
-     <ion-img :src="Profile" class="Profile"></ion-img>
+      <ion-img :src="Profile" class="Profile"></ion-img>
       <ion-button class="set">Set New Profile Picture</ion-button>
 
+      <ion-text class="retri">Choose From</ion-text>
       <div class="section">
-        <ion-text class="retri">Choose From</ion-text>
-        <ion-card class="basicinfo">
-         <ion-button>
+        <ion-button>
           <ion-img :src="gallery" class="icons"></ion-img>
           <ion-text>Gallery</ion-text>
         </ion-button>
@@ -19,14 +18,13 @@
           <ion-img :src="camera" class="icons"></ion-img>
           <ion-text>Camera</ion-text>
         </ion-button>
-        </ion-card>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage, IonImg,  } from "@ionic/vue";
+import { IonContent, IonPage, IonImg } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -35,7 +33,6 @@ export default defineComponent({
     IonContent,
     IonPage,
     IonImg,
-   
   },
   data() {
     return {
@@ -75,11 +72,11 @@ ion-page {
   white-space: nowrap;
   padding: 10px 0 0 10px;
 }
-.Profile{
+.Profile {
   display: block;
   width: 290px;
   height: 266px;
-  border: 10px solid #C4C4C4;
+  border: 10px solid #c4c4c4;
   margin: 75px auto 0 auto;
   background-size: cover;
   position: relative;
@@ -91,33 +88,44 @@ ion-page {
   }
 }
 .set {
-    --ion-color-primary: #fff;
-    --background: none;
-    color: #000;
-    --box-shadow: none;
-    margin: 5px 10px 0 0;
-    float: right;
-    font-family: "Rufina", serif;
-    font-size: 12px;
-    text-transform: capitalize;
-  
+  --ion-color-primary: #fff;
+  --background: none;
+  color: #000;
+  --box-shadow: none;
+  margin: 5px 10px 0 0;
+  float: right;
+  font-family: "Rufina", serif;
+  font-size: 12px;
+  text-transform: capitalize;
 }
 .section {
   font-family: "Rufina", sans-serif;
   font-size: 10px;
-
-  display: block;
-  margin: 30px 0 0 0;
+  display: flex;
+  margin: 30px auto 0 auto;
   padding: 0 30px;
-  .icons {
-    width: 34px;
-    height: 32px;
-    border-radius: 50%;
-    
+  width: min-content;
+  ion-button {
+    --background: none;
+    --box-shadow: none;
+    margin: 0;
+    background: #c4c4c4;
+    width: 100px;
+    height: 100px;
+          border: 1px solid red;
+    ion-img {
+      display: block;
+      width: 100%;
+      height: 32px;
+      border-radius: 50%;
+
     }
-    ion-text{
+    ion-text {
+      display: block;
       text-transform: capitalize;
       color: #000;
+      height: 0 0 0 0;
     }
+  }
 }
 </style>

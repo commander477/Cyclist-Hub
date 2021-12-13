@@ -22,6 +22,7 @@
             </ion-item>
             <div class="buttons">
               <ion-button fill="clear" class="sign-up">Sign Up</ion-button>
+              
               <ion-button fill="clear" class="login">LogIn</ion-button>
             </div>
           </ion-card-content>
@@ -33,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonPage, IonImg } from "@ionic/vue";
+import { IonContent, IonPage, IonImg, } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
